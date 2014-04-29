@@ -9,3 +9,8 @@ end
 describe service("sd-agent") do
   it { should be_running }
 end
+
+# Make sure we have some rummager code
+describe file("/var/www/rummager/current/config.ru") do
+  it { should be_file }
+end
