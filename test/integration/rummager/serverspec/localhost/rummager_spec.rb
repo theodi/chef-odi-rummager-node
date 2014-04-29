@@ -31,6 +31,11 @@ describe file("/home/rummager/env") do
   its(:content) { should match /SUCH: test/ }
 end
 
+# Make sure serverdensity agent is running
+describe service("nginx") do
+  it { should be_running }
+end
+
 # Make sure we have some rummager code
 # describe file("/var/www/rummager/current/config.ru") do
 #   it { should be_file }

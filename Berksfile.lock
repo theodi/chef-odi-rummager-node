@@ -5,6 +5,10 @@ DEPENDENCIES
   odi-monitoring
     git: https://github.com/theodi/chef-odi-monitoring.git
     revision: a604cfeff46356effcabe90143513a90b2a25bac
+  odi-nginx
+    git: git://github.com/theodi/odi-chef.git
+    revision: b724aa80bd4b166d3bd8e8216e8bc54059ac8461
+    rel: site-cookbooks/odi-nginx
   odi-rummager-node
     path: .
     metadata: true
@@ -27,9 +31,11 @@ GRAPH
   java (1.22.0)
   odi-monitoring (0.1.0)
     serverdensity (>= 0.0.0)
+  odi-nginx (0.4.0)
   odi-rummager-node (0.1.0)
     envbuilder (>= 0.0.0)
     odi-monitoring (>= 0.0.0)
+    odi-nginx (>= 0.0.0)
     odi-users (>= 0.0.0)
     rvm (>= 0.0.0)
   odi-users (0.2.0)
