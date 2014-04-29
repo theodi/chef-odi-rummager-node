@@ -1,5 +1,5 @@
 default.serverdensity.device_group = "quirkafleeg"
-default.rvm.default_ruby = "2.1.0"
+default.rvm.default_ruby = "1.9.3"
 default.user = "rummager"
 
 default.envbuilder.base_dir = "/home/rummager"

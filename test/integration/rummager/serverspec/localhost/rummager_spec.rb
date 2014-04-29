@@ -17,7 +17,7 @@ end
 
 # Make sure we have the right default ruby
 describe command('/usr/local/rvm/bin/rvm current') do
-  it { should return_stdout /ruby\-2\.1\.0/ }
+  it { should return_stdout /ruby\-1\.9\.3/ }
 end
 
 # Check we have a rummager user
