@@ -4,3 +4,8 @@ require 'spec_helper'
 describe command("aspell dicts") do
   it { should return_stdout /en/ }
 end
+
+# Make sure serverdensity agent is running
+describe service("sd-agent") do
+  it { should be_running }
+end
