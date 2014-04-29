@@ -6,3 +6,4 @@ description      'Wrapper cookbook for a rummager server node'
 version          '0.1.0'
 
 depends "odi-monitoring"
+depends "rvm"

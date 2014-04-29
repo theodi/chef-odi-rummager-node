@@ -6,6 +6,7 @@
 #
 
 include_recipe "odi-monitoring"
+include_recipe "rvm::system"
 
 package "aspell-en" do
   action :upgrade
