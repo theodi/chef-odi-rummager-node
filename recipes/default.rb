@@ -12,3 +12,4 @@ end
 include_recipe "odi-monitoring"
 include_recipe "rvm::system"
 include_recipe "odi-users"
+include_recipe "envbuilder"

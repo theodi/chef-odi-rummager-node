@@ -25,6 +25,12 @@ describe user('rummager') do
   it { should exist }
 end
 
+# Check we have the environment from chef
+describe file("/home/rummager/env") do
+  it { should be_file }
+  its(:content) { should match /SUCH: test/ }
+end
+
 # Make sure we have some rummager code
 # describe file("/var/www/rummager/current/config.ru") do
 #   it { should be_file }

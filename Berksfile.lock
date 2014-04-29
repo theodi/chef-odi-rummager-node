@@ -1,4 +1,7 @@
 DEPENDENCIES
+  envbuilder
+    git: git://github.com/theodi/chef-envbuilder.git
+    revision: 27252c8b85be41067ce364d62f9779855c5108b0
   odi-monitoring
     git: https://github.com/theodi/chef-odi-monitoring.git
     revision: a604cfeff46356effcabe90143513a90b2a25bac
@@ -20,12 +23,16 @@ GRAPH
   apt (2.3.10)
   chef_gem (0.1.0)
   dpkg_autostart (0.1.10)
+  envbuilder (0.2.0)
   java (1.22.0)
   odi-monitoring (0.1.0)
     serverdensity (>= 0.0.0)
   odi-rummager-node (0.1.0)
+    envbuilder (>= 0.0.0)
     odi-monitoring (>= 0.0.0)
+    odi-users (>= 0.0.0)
     rvm (>= 0.0.0)
+  odi-users (0.2.0)
   rvm (0.9.2)
     chef_gem (>= 0.0.0)
     java (>= 0.0.0)
