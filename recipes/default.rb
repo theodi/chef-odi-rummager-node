@@ -9,8 +9,14 @@ package "aspell-en" do
   action :upgrade
 end
 
+link "/usr/lib/libaspell.so" do
+  to "/usr/lib/libaspell.so.15"
+  action :create
+end
+
 include_recipe "odi-monitoring"
 include_recipe "rvm::system"
 include_recipe "odi-users"
 include_recipe "envbuilder"
 include_recipe "odi-nginx"
+include_recipe "odi-simple-deployment"

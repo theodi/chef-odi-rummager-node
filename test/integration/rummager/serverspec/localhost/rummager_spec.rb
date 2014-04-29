@@ -5,6 +5,11 @@ describe command("aspell dicts") do
   it { should return_stdout /en/ }
 end
 
+# Make sure /usr/lib/libaspell.so exists
+describe file("/usr/lib/libaspell.so") do
+  it { should be_linked_to "/usr/lib/libaspell.so.15" }
+end
+
 # Make sure serverdensity agent is running
 describe service("sd-agent") do
   it { should be_running }
@@ -31,12 +36,23 @@ describe file("/home/rummager/env") do
   its(:content) { should match /SUCH: test/ }
 end
 
-# Make sure serverdensity agent is running
+# Make sure nginx is running
 describe service("nginx") do
   it { should be_running }
 end
 
+# Make sure vhosts have the correct stuff
+describe file("/etc/nginx/sites-enabled/search.theodi.org") do
+  it { should be_file }
+  its(:content) { should match /search.theodi.org/ }
+end
+
 # Make sure we have some rummager code
-# describe file("/var/www/rummager/current/config.ru") do
-#   it { should be_file }
-# end
+describe file("/var/www/search.theodi.org/current/config.ru") do
+  it { should be_file }
+end
+
+# Make sure foreman job is running
+describe service("rummager-thin-1") do
+  it { should be_running }
+end
