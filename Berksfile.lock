@@ -1,0 +1,7 @@
+DEPENDENCIES
+  odi-rummager-node
+    path: .
+    metadata: true
+
+GRAPH
+  odi-rummager-node (0.1.0)
