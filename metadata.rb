@@ -7,3 +7,4 @@ version          '0.1.0'
 
 depends "odi-monitoring"
 depends "rvm"
+depends "odi-users"

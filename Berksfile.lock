@@ -5,6 +5,10 @@ DEPENDENCIES
   odi-rummager-node
     path: .
     metadata: true
+  odi-users
+    git: git://github.com/theodi/odi-chef.git
+    revision: b724aa80bd4b166d3bd8e8216e8bc54059ac8461
+    rel: site-cookbooks/odi-users
   rvm
     git: git://github.com/fnichol/chef-rvm.git
     revision: dd58087e7399097a9b9df4e2e7235908aace2afd

@@ -20,6 +20,11 @@ describe command('/usr/local/rvm/bin/rvm current') do
   it { should return_stdout /ruby\-2\.1\.0/ }
 end
 
+# Check we have a rummager user
+describe user('rummager') do
+  it { should exist }
+end
+
 # Make sure we have some rummager code
 # describe file("/var/www/rummager/current/config.ru") do
 #   it { should be_file }
