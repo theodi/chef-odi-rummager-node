@@ -1,0 +1,13 @@
+.kitchen/
+.kitchen.local.yml
+
+/.bundle/
+.leibniz/
+
+/test/data_bags/serverdensity/credentials.json
+
+/tmp/
+
+.DS_Store
+
+*.pem

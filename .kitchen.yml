@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 1024
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: rummager
+    run_list: "recipe[odi-rummager-node]"
+    attributes:
+    data_bags_path: test/data_bags
