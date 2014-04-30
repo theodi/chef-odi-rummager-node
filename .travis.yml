@@ -5,8 +5,7 @@ before_script:
 - ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''
 - echo 'Host *' >> ~/.ssh/config
 - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-- openssl aes-256-cbc -k "$DATA_BAG_KEY" -in test/data_bags/serverdensity/credentials.enc.json
-  -d -a -out test/data_bags/serverdensity/credentials.json
+- openssl aes-256-cbc -k "$DATA_BAG_KEY" -in test/data_bags/serverdensity/credentials.enc.json -d -a -out test/data_bags/serverdensity/credentials.json
 script:
 - bundle exec rake
 after_success:
