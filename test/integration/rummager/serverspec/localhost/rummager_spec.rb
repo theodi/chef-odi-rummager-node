@@ -56,3 +56,8 @@ end
 describe service("rummager-thin-1") do
   it { should be_running }
 end
+
+# Make sure sidekiq worker is running
+describe service("rummager-worker-1") do
+  it { should be_running }
+end
