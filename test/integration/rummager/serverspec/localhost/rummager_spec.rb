@@ -16,13 +16,13 @@ describe service("sd-agent") do
 end
 
 # Make sure we have rvm installed
-describe command('/usr/local/rvm/bin/rvm') do
+describe command('/home/rummager/.rvm/bin/rvm') do
   it { should return_stdout /RVM is the Ruby enVironment Manager/ }
 end
 
 # Make sure we have the right default ruby
-describe command('/usr/local/rvm/bin/rvm current') do
-  it { should return_stdout /ruby\-1\.9\.3/ }
+describe command('/home/rummager/.rvm/bin/rvm current') do
+  it { should return_stdout "ruby-1.9.3-p545" }
 end
 
 # Check we have a rummager user
