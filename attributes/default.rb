@@ -1,7 +1,9 @@
 default.serverdensity.device_group = "quirkafleeg"
 default.user = "rummager"
 default.rvm.default_ruby = "1.9.3-p545"
-default.migration_command = "RUMMAGER_INDEX=all bundle exec rake rummager:migrate_index"
+
+default.deploy.migrate = true
+default.deploy.migration_command = "RUMMAGER_INDEX=all bundle exec rake rummager:migrate_index"
 
 default.rvm.user_installs << {
   user: default.user,
