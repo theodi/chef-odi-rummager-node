@@ -57,7 +57,7 @@ GRAPH
   odi-monitoring (0.1.0)
     serverdensity (>= 0.0.0)
   odi-nginx (0.4.0)
-  odi-rummager-node (0.1.0)
+  odi-rummager-node (0.1.1)
     envbuilder (>= 0.0.0)
     odi-monitoring (>= 0.0.0)
     odi-nginx (>= 0.0.0)
