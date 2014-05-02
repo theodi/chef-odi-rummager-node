@@ -2,6 +2,9 @@ DEPENDENCIES
   envbuilder
     git: git://github.com/theodi/chef-envbuilder.git
     revision: 27252c8b85be41067ce364d62f9779855c5108b0
+  odi-elasticsearch-node
+    git: git://github.com/theodi/chef-odi-elasticsearch-node.git
+    revision: 335e2ae07d85a63639ad307644ab2e80cf268177
   odi-monitoring
     git: https://github.com/theodi/chef-odi-monitoring.git
     revision: a604cfeff46356effcabe90143513a90b2a25bac
@@ -47,6 +50,10 @@ GRAPH
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
   java (1.22.0)
+  odi-elasticsearch-node (0.1.1)
+    apt (>= 0.0.0)
+    java (>= 0.0.0)
+    odi-monitoring (>= 0.0.0)
   odi-monitoring (0.1.0)
     serverdensity (>= 0.0.0)
   odi-nginx (0.4.0)
