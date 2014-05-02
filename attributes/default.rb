@@ -17,3 +17,4 @@ default.envbuilder.group = default.user
 
 default.project_fqdn = "search.theodi.org"
 default.git_project = "rummager"
+default.RACK_ENV = "production"
