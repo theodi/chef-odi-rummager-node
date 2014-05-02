@@ -6,7 +6,7 @@ DEPENDENCIES
     git: git://github.com/theodi/chef-odi-elasticsearch-node.git
     revision: 335e2ae07d85a63639ad307644ab2e80cf268177
   odi-monitoring
-    git: https://github.com/theodi/chef-odi-monitoring.git
+    git: git://github.com/theodi/chef-odi-monitoring.git
     revision: a604cfeff46356effcabe90143513a90b2a25bac
   odi-nginx
     git: git://github.com/theodi/odi-chef.git
@@ -30,7 +30,7 @@ DEPENDENCIES
     git: git://github.com/fnichol/chef-rvm.git
     revision: dd58087e7399097a9b9df4e2e7235908aace2afd
   serverdensity
-    git: https://github.com/serverdensity/chef-serverdensity.git
+    git: git://github.com/serverdensity/chef-serverdensity.git
     revision: 5d1f81c8d14074dbdf8fc3eaee3f238acc22f693
 
 GRAPH
