@@ -30,12 +30,6 @@ describe user('rummager') do
   it { should exist }
 end
 
-# Check we have the environment from chef
-describe file("/home/rummager/env") do
-  it { should be_file }
-  its(:content) { should match /SUCH: test/ }
-end
-
 # Make sure nginx is running
 describe service("nginx") do
   it { should be_running }
@@ -50,6 +44,11 @@ end
 # Make sure we have some rummager code
 describe file("/var/www/search.theodi.org/current/config.ru") do
   it { should be_file }
+end
+
+# Make sure we have environment correctly
+describe file("/var/www/search.theodi.org/current/.env") do
+  its(:content) { should match /SUCH: test/ }
 end
 
 # Make sure foreman job is running
