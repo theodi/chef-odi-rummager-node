@@ -22,7 +22,7 @@ end
 
 # Make sure we have the right default ruby
 describe command('/home/rummager/.rvm/bin/rvm current') do
-  it { should return_stdout "ruby-1.9.3-p545" }
+  it { should return_stdout /ruby-1.9.3/ }
 end
 
 # Check we have a rummager user
