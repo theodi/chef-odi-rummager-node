@@ -20,9 +20,8 @@ DEPENDENCIES
     revision: b724aa80bd4b166d3bd8e8216e8bc54059ac8461
     rel: site-cookbooks/odi-rvm
   odi-simple-deployment
-    git: git://github.com/theodi/odi-chef.git
-    revision: b724aa80bd4b166d3bd8e8216e8bc54059ac8461
-    rel: site-cookbooks/odi-simple-deployment
+    git: git://github.com/theodi/chef-odi-simple-deployment.git
+    revision: 3b5a1555a05911eb33ace2a4118526c9f531de72
   odi-users
     git: git://github.com/theodi/odi-chef.git
     revision: b724aa80bd4b166d3bd8e8216e8bc54059ac8461
@@ -75,7 +74,7 @@ GRAPH
     odi-xml (>= 0.0.0)
     rvm (>= 0.0.0)
     xslt (>= 0.0.0)
-  odi-simple-deployment (0.3.0)
+  odi-simple-deployment (0.4.0)
     git (>= 0.0.0)
   odi-users (0.2.0)
   odi-xml (0.1.0)

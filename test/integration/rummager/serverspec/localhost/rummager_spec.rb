@@ -38,7 +38,8 @@ end
 # Make sure vhosts have the correct stuff
 describe file("/etc/nginx/sites-enabled/search.theodi.org") do
   it { should be_file }
-  its(:content) { should match /search.theodi.org/ }
+  its(:content) { should match "server_name search.theodi.org;" }
+  its(:content) { should match "proxy_pass http://rummager;" }
 end
 
 # Make sure we have some rummager code

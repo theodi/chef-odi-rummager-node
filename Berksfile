@@ -10,7 +10,7 @@ cookbook 'rvm', github: 'theodi/chef-rvm'
 cookbook 'odi-users', github: 'theodi/odi-chef', rel: "site-cookbooks/odi-users"
 cookbook 'envbuilder', github: 'theodi/chef-envbuilder'
 cookbook 'odi-nginx', github: 'theodi/odi-chef', rel: "site-cookbooks/odi-nginx"
-cookbook 'odi-simple-deployment', github: 'theodi/odi-chef', rel: "site-cookbooks/odi-simple-deployment"
+cookbook 'odi-simple-deployment', github: 'theodi/chef-odi-simple-deployment'
 
 cookbook "redis", github: 'miah/chef-redis'
 cookbook "odi-elasticsearch-node", github: 'theodi/chef-odi-elasticsearch-node'
