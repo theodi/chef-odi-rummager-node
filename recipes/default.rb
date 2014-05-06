@@ -16,7 +16,7 @@ end
 
 include_recipe "odi-monitoring"
 include_recipe "odi-users"
-include_recipe "rvm::user"
+include_recipe "odi-rvm"
 include_recipe "envbuilder"
 include_recipe "odi-nginx"
 include_recipe "odi-simple-deployment"

@@ -15,6 +15,10 @@ DEPENDENCIES
   odi-rummager-node
     path: .
     metadata: true
+  odi-rvm
+    git: git://github.com/theodi/odi-chef.git
+    revision: b724aa80bd4b166d3bd8e8216e8bc54059ac8461
+    rel: site-cookbooks/odi-rvm
   odi-simple-deployment
     git: git://github.com/theodi/odi-chef.git
     revision: b724aa80bd4b166d3bd8e8216e8bc54059ac8461
@@ -23,20 +27,23 @@ DEPENDENCIES
     git: git://github.com/theodi/odi-chef.git
     revision: b724aa80bd4b166d3bd8e8216e8bc54059ac8461
     rel: site-cookbooks/odi-users
+  odi-xml
+    git: git://github.com/theodi/odi-chef.git
+    revision: b724aa80bd4b166d3bd8e8216e8bc54059ac8461
+    rel: site-cookbooks/odi-xml
   redis
     git: git://github.com/miah/chef-redis.git
     revision: 5b7e8585b23dcef0de3ec6cfbb31ad75fc912d8e
   rvm
-    git: git://github.com/fnichol/chef-rvm.git
-    revision: dd58087e7399097a9b9df4e2e7235908aace2afd
+    git: git://github.com/theodi/chef-rvm.git
+    revision: 7ba48b5cf97f1bf32f5df30b7c263d745e652faf
   serverdensity
     git: git://github.com/serverdensity/chef-serverdensity.git
     revision: 5d1f81c8d14074dbdf8fc3eaee3f238acc22f693
 
 GRAPH
   apt (2.3.10)
-  build-essential (2.0.0)
-  chef_gem (0.1.0)
+  build-essential (2.0.2)
   chef_handler (1.1.6)
   discovery (0.2.2)
   dmg (2.2.0)
@@ -57,16 +64,22 @@ GRAPH
   odi-monitoring (0.1.0)
     serverdensity (>= 0.0.0)
   odi-nginx (0.4.0)
-  odi-rummager-node (0.1.1)
+  odi-rummager-node (0.1.2)
     envbuilder (>= 0.0.0)
     odi-monitoring (>= 0.0.0)
     odi-nginx (>= 0.0.0)
+    odi-rvm (>= 0.0.0)
     odi-simple-deployment (>= 0.0.0)
     odi-users (>= 0.0.0)
+  odi-rvm (0.2.1)
+    odi-xml (>= 0.0.0)
     rvm (>= 0.0.0)
+    xslt (>= 0.0.0)
   odi-simple-deployment (0.3.0)
     git (>= 0.0.0)
   odi-users (0.2.0)
+  odi-xml (0.1.0)
+    xml (>= 0.0.0)
   redis (2.1.1)
     build-essential (>= 0.0.0)
     discovery (>= 0.2.0)
@@ -77,9 +90,7 @@ GRAPH
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
-  rvm (0.9.2)
-    chef_gem (>= 0.0.0)
-    java (>= 0.0.0)
+  rvm (0.0.2)
   serverdensity (2.0.0)
     apt (>= 0.0.0)
     dpkg_autostart (~> 0.1.6)
@@ -87,6 +98,9 @@ GRAPH
   stunnel (2.1.0)
   windows (1.30.2)
     chef_handler (>= 0.0.0)
+  xml (1.2.4)
+    build-essential (>= 0.0.0)
+  xslt (0.0.1)
   yum (3.2.0)
   yum-epel (0.3.6)
     yum (~> 3.0)

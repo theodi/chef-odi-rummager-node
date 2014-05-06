@@ -1,13 +1,8 @@
 default.serverdensity.device_group = "quirkafleeg"
 default.user = "rummager"
-default.rvm.default_ruby = "1.9.3-p545"
 
-default.rvm.user_installs = [{
-  user: default.user,
-  default_ruby: default.rvm.default_ruby,
-  rubies: [default.rvm.default_ruby],
-}]
-
+default.rvm.user = "rummager"
+default.rvm.ruby = "1.9.3"
 
 default.envbuilder.base_dir = "/home/#{default.user}"
 default.envbuilder.base_dbi = "production"
