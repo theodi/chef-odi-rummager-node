@@ -17,6 +17,6 @@ env:
   global:
   - KITCHEN_YAML=.kitchen.cloud.yml
   - secure: aoP3vrnMLzyrq+V4Xv6S2IxHYqYcXSC7RwKa0564++gkRznIYKvrFrYbpFXl1tYiFxOAzCpjCxEpGinYhlWPJOHE98O6wRjcWzOCSWKzVQx9bRu32MquL3jh2JP7BAtmapVjfP6BGp0IlNx6dlvlDskh3aoJ2wzgaCxhqjvzubI=
-  - secure: buT+elL0w8CfCU+WBKdnw/4RR0xubC/MlDZWtITL6GhY5GnxRbnE/mNcxHsWmLR8FoCLt31rYSno/tyyY5P/zzaW/Vf+Cov8GQ599CqdisMS3iNn8sIRymHJjfI/GoHHHtYfWTrBfkzu/6o8l60Rxp907rwCkTGwlhTX7lCOWP4=
+  - secure: Z9GkUVnhvUh04QF/0Xhwk/ePngLXjTCiWeeWmBcEryPaKFR9/QmwOTNx12CA/racKQBjFcnYUM6TrWEz8P2EfSMcHqAOhijarhPnP6jC8XMZqOZYBMlp7D3q51/F+uaqgbSAVE8nwhPu7hnnDX2kD++7kSfUad8EoI9wE20h+mw=
   - secure: MmsBXFG0a6HeNo3A+WZpCiaOaY1fKYlRc38IdbpU2ON4mat9ZEVvdUBM+i0ggeIbGotQdEOq/XkMC2tB9XAih22UXZ1ToCrbXFyVfYTiCqVvTPsaOyQq0h21FT3MZjX2dBdJ931Dxvoz4ZOTuelJbNYhG4QJzydLajxc/HqE0ew=
   - secure: Exi9xe/uBk5z59rkUPh7OXJsc1gwhbBI4nrWciclomkX5BUJWj/6SkeonGZvZhmU4/Tf20IRw1tz+MSdwYBHJJ5ZS/s191vU/4/7VghG+KV5A+UVYpnib8EYM80eLjNZHm+yt92aKHv4ook7TdFSGAwHS4QVtuv14zMcuP3Bz3A=
