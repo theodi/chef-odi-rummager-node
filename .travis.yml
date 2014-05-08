@@ -1,18 +1,22 @@
 language: ruby
 rvm:
-- 2.1.0
+- 2.0.0
 before_script:
-  - ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''
-  - echo 'Host *' >> ~/.ssh/config
-  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-  - openssl aes-256-cbc -k "$DATA_BAG_KEY" -in test/data_bags/serverdensity/credentials.enc.json -d -a -out test/data_bags/serverdensity/credentials.json
+- ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''
+- echo 'Host *' >> ~/.ssh/config
+- echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+- openssl aes-256-cbc -k "$DATA_BAG_KEY" -in test/data_bags/serverdensity/credentials.enc.json -d -a -out test/data_bags/serverdensity/credentials.json
 script:
-  - bundle exec rake
+- travis_wait 35 bundle exec rake
 after_success:
-  - openssl enc -d -aes-256-cbc -k $CHEF_KEY -in deploy/key.enc -out deploy/key.pem
-  - chmod 600 deploy/key.pem
-  - "bundle exec berks install"
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && bundle exec rake berkshelf:upload'
+- openssl enc -d -aes-256-cbc -k $CHEF_KEY -in deploy/key.enc -out deploy/key.pem
+- chmod 600 deploy/key.pem
+- bundle exec berks install
+- "[ \"$TRAVIS_BRANCH\" == \"master\" ] && [ \"$TRAVIS_PULL_REQUEST\" == \"false\"] && bundle exec rake berkshelf:upload"
 env:
   global:
   - KITCHEN_YAML=.kitchen.cloud.yml
+  - secure: aoP3vrnMLzyrq+V4Xv6S2IxHYqYcXSC7RwKa0564++gkRznIYKvrFrYbpFXl1tYiFxOAzCpjCxEpGinYhlWPJOHE98O6wRjcWzOCSWKzVQx9bRu32MquL3jh2JP7BAtmapVjfP6BGp0IlNx6dlvlDskh3aoJ2wzgaCxhqjvzubI=
+  - secure: WKXtq4W9xrm7+F8I0eHEtDrVxTFMan4fJL+JZG20HfS0CQqaXppDXtnWzJweLk2yUeq+sXrMQOjl8rHFcfQMSjfABaoiWJRI1jJvg8zSnVXT3Y4rX8or9illOpRLOxCRDaKGA5h9j5mK2p8Xo9OvT/2odVqSexklhfuQU9wtZlk=
+  - secure: MmsBXFG0a6HeNo3A+WZpCiaOaY1fKYlRc38IdbpU2ON4mat9ZEVvdUBM+i0ggeIbGotQdEOq/XkMC2tB9XAih22UXZ1ToCrbXFyVfYTiCqVvTPsaOyQq0h21FT3MZjX2dBdJ931Dxvoz4ZOTuelJbNYhG4QJzydLajxc/HqE0ew=
+  - secure: Exi9xe/uBk5z59rkUPh7OXJsc1gwhbBI4nrWciclomkX5BUJWj/6SkeonGZvZhmU4/Tf20IRw1tz+MSdwYBHJJ5ZS/s191vU/4/7VghG+KV5A+UVYpnib8EYM80eLjNZHm+yt92aKHv4ook7TdFSGAwHS4QVtuv14zMcuP3Bz3A=

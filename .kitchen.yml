@@ -12,6 +12,7 @@ platforms:
 
 suites:
   - name: rummager
-    run_list: "recipe[odi-rummager-node]"
+    # redis server is included because app needs it to run
+    run_list: ["recipe[odi-elasticsearch-node]", "recipe[redis::server]", "recipe[odi-rummager-node]"]
     attributes:
     data_bags_path: test/data_bags
