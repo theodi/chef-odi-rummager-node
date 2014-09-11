@@ -61,8 +61,3 @@ end
 describe service("rummager-worker-1") do
   it { should be_running }
 end
-
-# Check indecies have been migrated
-describe command("curl http://localhost:9200/_status") do
-  it { should return_stdout /dapaas/ }
-end
