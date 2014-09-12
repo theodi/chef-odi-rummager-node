@@ -20,10 +20,3 @@ include_recipe "odi-rvm"
 include_recipe "envbuilder"
 include_recipe "odi-nginx"
 include_recipe "odi-simple-deployment"
-
-execute "bundle exec rake rummager:migrate_index" do
-  environment ({
-    "RUMMAGER_INDEX" => "all"
-  })
-  cwd "/var/www/search.theodi.org/current"
-end
